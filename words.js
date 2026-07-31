@@ -1,0 +1,22 @@
+const WORDS = [
+"gatim",
+"prati",
+"yogam",
+"karma",
+"param",
+"sarve",
+"tasya",
+"yasya",
+"yukta",
+"padam",
+"tatam",
+"hanti",
+"mrtam",
+"papam",
+"viddh",
+"bruhi",
+"jatam",
+"mahim",
+"bahun",
+"krtva"
+];
