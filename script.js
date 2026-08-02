@@ -103,6 +103,8 @@ function createBoard() {
 
 playBtn.addEventListener("click", () => {
 
+    console.log("Play button clicked");
+
     instructions.style.display = "none";
 
 });
