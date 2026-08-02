@@ -164,7 +164,6 @@ function addLetter(letter) {}
 
 function removeLetter() {}
 
-function submitGuess() {}
 // ======================================
 // GITA WORD GAME
 // PART 2
