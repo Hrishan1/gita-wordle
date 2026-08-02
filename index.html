@@ -3,25 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gita Wordle</title>
+    <title>Gita Word Game</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🕉️ Gita Wordle</h1>
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <button id="helpBtn">?</button>
+
+    <h1>Gita Word Game</h1>
+
+    <button id="restartBtn">↻</button>
+
+</header>
+
+<!-- ================= INSTRUCTIONS ================= -->
+
+<div id="instructions" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Welcome to Gita Word Game</h2>
+
+        <p>
+            Guess the Bhagavad Gita word in six tries.
+        </p>
+
+        <h3>How the colors work</h3>
+
+        <div class="example">
+            <div class="tile green">क</div>
+            <span>Correct letter in the correct position.</span>
+        </div>
+
+        <div class="example">
+            <div class="tile yellow">र</div>
+            <span>Letter is in the word, but in another position.</span>
+        </div>
+
+        <div class="example">
+            <div class="tile gray">म</div>
+            <span>Letter is not in the word.</span>
+        </div>
+
+        <p>
+            Only words from the Bhagavad Gita database are accepted.
+        </p>
+
+        <button id="playBtn">Play</button>
+
+    </div>
+
+</div>
+
+<!-- ================= MESSAGE ================= -->
+
+<div id="message"></div>
+
+<!-- ================= GAME BOARD ================= -->
 
 <div id="board"></div>
 
-<div class="controls">
-    <input
-        id="guessInput"
-        type="text"
-        maxlength="5"
-        placeholder="Enter word">
-    <button onclick="submitGuess()">Guess</button>
+<!-- ================= KEYBOARD ================= -->
+
+<div id="keyboard">
+
+    <div class="keyboard-row">
+        <button class="key">q</button>
+        <button class="key">w</button>
+        <button class="key">e</button>
+        <button class="key">r</button>
+        <button class="key">t</button>
+        <button class="key">y</button>
+        <button class="key">u</button>
+        <button class="key">i</button>
+        <button class="key">o</button>
+        <button class="key">p</button>
+    </div>
+
+    <div class="keyboard-row">
+        <button class="key">a</button>
+        <button class="key">s</button>
+        <button class="key">d</button>
+        <button class="key">f</button>
+        <button class="key">g</button>
+        <button class="key">h</button>
+        <button class="key">j</button>
+        <button class="key">k</button>
+        <button class="key">l</button>
+    </div>
+
+    <div class="keyboard-row">
+        <button class="key wide" id="enterKey">Enter</button>
+
+        <button class="key">z</button>
+        <button class="key">x</button>
+        <button class="key">c</button>
+        <button class="key">v</button>
+        <button class="key">b</button>
+        <button class="key">n</button>
+        <button class="key">m</button>
+
+        <button class="key wide" id="backspaceKey">⌫</button>
+    </div>
+
 </div>
 
-<p id="message"></p>
+<!-- ================= WIN MODAL ================= -->
+
+<div id="resultModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2 id="resultTitle"></h2>
+
+        <p id="resultWord"></p>
+
+        <button id="playAgainBtn">Play Again</button>
+
+    </div>
+
+</div>
 
 <script src="words.js"></script>
 <script src="script.js"></script>
